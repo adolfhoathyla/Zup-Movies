@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Dashboard View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DashboardViewController" customModule="Zup_Movies" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,54 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oJd-qn-4ZE">
+                                <rect key="frame" x="167" y="313" width="40" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="JtC-3F-Dbo"/>
+                                    <constraint firstAttribute="width" constant="40" id="UU7-Tc-LPd"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVY-pk-m7S">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="332"/>
+                                <color key="backgroundColor" red="0.22870885260000001" green="0.52643916420000003" blue="0.6242503157" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Meus Filmes" image="movie_icon">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeW-PW-zXh">
+                                <rect key="frame" x="0.0" y="332" width="375" height="335"/>
+                                <color key="backgroundColor" red="1" green="0.62745098040000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Pesquisar Filme" image="search_icon">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zeW-PW-zXh" secondAttribute="trailing" id="1jb-7K-sd7"/>
+                            <constraint firstItem="DVY-pk-m7S" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2Eg-50-4ec"/>
+                            <constraint firstAttribute="trailing" secondItem="DVY-pk-m7S" secondAttribute="trailing" id="5zO-Tb-p75"/>
+                            <constraint firstItem="oJd-qn-4ZE" firstAttribute="top" secondItem="DVY-pk-m7S" secondAttribute="bottom" constant="-19" id="6Qv-YR-lKi"/>
+                            <constraint firstItem="zeW-PW-zXh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Aav-VY-qZI"/>
+                            <constraint firstItem="DVY-pk-m7S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CGX-wY-oCO"/>
+                            <constraint firstItem="oJd-qn-4ZE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JgJ-qJ-bBP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zeW-PW-zXh" secondAttribute="bottom" id="Ycg-QF-uXi"/>
+                            <constraint firstItem="oJd-qn-4ZE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tCy-Q9-fEc"/>
+                            <constraint firstItem="zeW-PW-zXh" firstAttribute="top" secondItem="oJd-qn-4ZE" secondAttribute="bottom" constant="-21" id="unB-Qa-N6A"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="movie_icon" width="128" height="128"/>
+        <image name="search_icon" width="128" height="128"/>
+    </resources>
 </document>
