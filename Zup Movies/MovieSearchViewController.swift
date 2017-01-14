@@ -42,7 +42,7 @@ class MovieSearchViewController: UIViewController, UITextFieldDelegate {
             self.indicator.stopAnimating()
         }
         
-        return true
+        return false
     }
 
     

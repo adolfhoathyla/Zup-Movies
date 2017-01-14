@@ -14,7 +14,7 @@ class OMDBHelper: NSObject {
     static let OMDB_URI = "http://www.omdbapi.com"
     
     static func searchMovie(text: String, completionBlock:@escaping ((_ movies: [Movie]?) -> ())) {
-        let searchUri = OMDB_URI + "/?s=\(text)&plot=short&r=json"
+        let searchUri = OMDB_URI + "/?s=\(text.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines))&plot=short&r=json"
         let uriUTF8 = searchUri.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
 
         var movies = [Movie]()
@@ -28,7 +28,9 @@ class OMDBHelper: NSObject {
                             if let posterAux = movieDictionary.value(forKey: "Poster") as? String {
                                 movie.posterURI = posterAux
                                 let data = NSData(contentsOf: NSURL(string: posterAux) as! URL)
-                                movie.poster = UIImage(data: data as! Data)
+                                if let data = data as? Data {
+                                    movie.poster = UIImage(data: data)
+                                }
                             }
                             if let titleAux = movieDictionary.value(forKey: "Title") as? String {
                                 movie.title = titleAux
@@ -58,7 +60,9 @@ class OMDBHelper: NSObject {
                 if let posterAux = JSON.value(forKey: "Poster") as? String {
                     movie.posterURI = posterAux
                     let data = NSData(contentsOf: NSURL(string: posterAux) as! URL)
-                    movie.poster = UIImage(data: data as! Data)
+                    if let data = data as? Data {
+                        movie.poster = UIImage(data: data)
+                    }
                 }
                 if let titleAux = JSON.value(forKey: "Title") as? String {
                     movie.title = titleAux
