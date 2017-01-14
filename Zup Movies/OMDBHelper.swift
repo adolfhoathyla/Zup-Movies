@@ -26,7 +26,9 @@ class OMDBHelper: NSObject {
                         let movie = Movie()
                         if let movieDictionary = movieJSON as? NSDictionary {
                             if let posterAux = movieDictionary.value(forKey: "Poster") as? String {
-                                movie.poster = posterAux
+                                movie.posterURI = posterAux
+                                let data = NSData(contentsOf: NSURL(string: posterAux) as! URL)
+                                movie.poster = UIImage(data: data as! Data)
                             }
                             if let titleAux = movieDictionary.value(forKey: "Title") as? String {
                                 movie.title = titleAux
@@ -46,8 +48,51 @@ class OMDBHelper: NSObject {
         }
     }
     
-    static func getMovie(id: String, completionBlock: ((_ movie: Movie) -> ())) {
-
+    static func getMovie(id: String, completionBlock: @escaping ((_ movie: Movie) -> ())) {
+        let uri = OMDB_URI + "/?i=\(id)&plot=full&r=json"
+        
+        let movie = Movie()
+        
+        Alamofire.request(uri).responseJSON { (response) in
+            if let JSON = response.result.value as? NSDictionary {
+                if let posterAux = JSON.value(forKey: "Poster") as? String {
+                    movie.posterURI = posterAux
+                    let data = NSData(contentsOf: NSURL(string: posterAux) as! URL)
+                    movie.poster = UIImage(data: data as! Data)
+                }
+                if let titleAux = JSON.value(forKey: "Title") as? String {
+                    movie.title = titleAux
+                }
+                if let yearAux = JSON.value(forKey: "Year") as? String {
+                    movie.year = Int(yearAux)
+                }
+                if let idAux = JSON.value(forKey: "imdbID") as? String {
+                    movie.id = idAux
+                }
+                if let runtimeAux = JSON.value(forKey: "Runtime") as? String {
+                    movie.runtime = runtimeAux
+                }
+                if let genreAux = JSON.value(forKey: "Genre") as? String {
+                    movie.genre = genreAux
+                }
+                if let writerAux = JSON.value(forKey: "Writer") as? String {
+                    movie.writer = writerAux
+                }
+                if let actorsAux = JSON.value(forKey: "Actors") as? String {
+                    movie.actors = actorsAux
+                }
+                if let plotAux = JSON.value(forKey: "Plot") as? String {
+                    movie.plot = plotAux
+                }
+                if let countryAux = JSON.value(forKey: "Country") as? String {
+                    movie.country = countryAux
+                }
+                if let ratingAux = JSON.value(forKey: "imdbRating") as? String {
+                    movie.rating = Float(ratingAux)
+                }
+                completionBlock(movie)
+            }
+        }
     }
     
 }

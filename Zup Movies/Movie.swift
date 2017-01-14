@@ -19,5 +19,6 @@ class Movie: NSObject {
     var plot: String?
     var country: String?
     var rating: Float?
-    var poster: String?
+    var posterURI: String?
+    var poster: UIImage?
 }
