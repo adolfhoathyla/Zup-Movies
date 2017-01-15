@@ -16,11 +16,22 @@ class MovieDetailsTableViewController: UITableViewController {
     @IBOutlet var movieTitle: UILabel!
     @IBOutlet var movieWriter: UILabel!
     @IBOutlet var movieRating: UILabel!
+    @IBOutlet var movieRuntime: UILabel!
+    @IBOutlet var movieActors: UILabel!
+    @IBOutlet var movieGenre: UILabel!
+    @IBOutlet var movieCountry: UILabel!
+    @IBOutlet var movieYear: UILabel!
+    @IBOutlet var moviePlot: UITextView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureViewDetails()
+        
+        tableView.tableFooterView = UIView()
+        tableView.estimatedRowHeight = 300.0
+        tableView.rowHeight = UITableViewAutomaticDimension
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -41,7 +52,7 @@ class MovieDetailsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 6
     }
 
     /*
@@ -103,6 +114,9 @@ class MovieDetailsTableViewController: UITableViewController {
         
         movieTitle.adjustsFontSizeToFitWidth = true
         movieWriter.adjustsFontSizeToFitWidth = true
+        movieActors.adjustsFontSizeToFitWidth = true
+        movieGenre.adjustsFontSizeToFitWidth = true
+        movieCountry.adjustsFontSizeToFitWidth = true
         
         OMDBHelper.getMovie(id: movie.id!) { (movie) in
             self.movie = movie
@@ -110,7 +124,13 @@ class MovieDetailsTableViewController: UITableViewController {
             self.poster.image = movie.poster
             self.movieTitle.text = movie.title
             self.movieWriter.text = movie.writer
-            self.movieRating.text = String(format: "IMDb rating: %.1f", movie.rating!)
+            if let _ = movie.rating { self.movieRating.text = String(format: "IMDb rating: %.1f", movie.rating!) }
+            self.movieRuntime.text = movie.runtime
+            self.movieActors.text = movie.actors
+            self.movieGenre.text = movie.genre
+            self.movieCountry.text = movie.country
+            if let year = movie.year { self.movieYear.text = String(describing: year) }
+            self.moviePlot.text = movie.plot
         }
         
 

@@ -11,7 +11,7 @@ import UIKit
 class MovieSearchViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var movieTitle: UITextField!
-    let indicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+    let indicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.white)
     
     override func viewDidLoad() {
         super.viewDidLoad()
