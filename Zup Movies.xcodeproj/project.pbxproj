@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		160AFE181E2954EE00B49E9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160AFE171E2954EE00B49E9D /* AppDelegate.swift */; };
 		160AFE1D1E2954EE00B49E9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 160AFE1B1E2954EE00B49E9D /* Main.storyboard */; };
-		160AFE201E2954EE00B49E9D /* Zup_Movies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 160AFE1E1E2954EE00B49E9D /* Zup_Movies.xcdatamodeld */; };
 		160AFE221E2954EE00B49E9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 160AFE211E2954EE00B49E9D /* Assets.xcassets */; };
 		160AFE251E2954EE00B49E9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 160AFE231E2954EE00B49E9D /* LaunchScreen.storyboard */; };
 		160AFE301E2954EE00B49E9D /* Zup_MoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160AFE2F1E2954EE00B49E9D /* Zup_MoviesTests.swift */; };
@@ -23,6 +22,9 @@
 		160AFE591E2A7FCF00B49E9D /* SearchResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160AFE581E2A7FCF00B49E9D /* SearchResultTableViewController.swift */; };
 		160AFE5C1E2A89EF00B49E9D /* ItemMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160AFE5B1E2A89EF00B49E9D /* ItemMovieTableViewCell.swift */; };
 		160AFE5E1E2AA72600B49E9D /* MovieDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160AFE5D1E2AA72600B49E9D /* MovieDetailsTableViewController.swift */; };
+		161025941E2BE37B0046D976 /* Zup_Movies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 161025921E2BE37B0046D976 /* Zup_Movies.xcdatamodeld */; };
+		161025961E2C003E0046D976 /* MyMoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161025951E2C003E0046D976 /* MyMoviesTableViewController.swift */; };
+		161025991E2C00F50046D976 /* MyMovieItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161025981E2C00F50046D976 /* MyMovieItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +61,6 @@
 		160AFE141E2954EE00B49E9D /* Zup Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zup Movies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		160AFE171E2954EE00B49E9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		160AFE1C1E2954EE00B49E9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		160AFE1F1E2954EE00B49E9D /* Zup_Movies.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Zup_Movies.xcdatamodel; sourceTree = "<group>"; };
 		160AFE211E2954EE00B49E9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		160AFE241E2954EE00B49E9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		160AFE261E2954EE00B49E9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,6 +78,9 @@
 		160AFE581E2A7FCF00B49E9D /* SearchResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewController.swift; sourceTree = "<group>"; };
 		160AFE5B1E2A89EF00B49E9D /* ItemMovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemMovieTableViewCell.swift; sourceTree = "<group>"; };
 		160AFE5D1E2AA72600B49E9D /* MovieDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsTableViewController.swift; sourceTree = "<group>"; };
+		161025931E2BE37B0046D976 /* Zup_Movies.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Zup_Movies.xcdatamodel; sourceTree = "<group>"; };
+		161025951E2C003E0046D976 /* MyMoviesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMoviesTableViewController.swift; sourceTree = "<group>"; };
+		161025981E2C00F50046D976 /* MyMovieItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMovieItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +139,7 @@
 				160AFE171E2954EE00B49E9D /* AppDelegate.swift */,
 				160AFE211E2954EE00B49E9D /* Assets.xcassets */,
 				160AFE261E2954EE00B49E9D /* Info.plist */,
-				160AFE1E1E2954EE00B49E9D /* Zup_Movies.xcdatamodeld */,
+				161025921E2BE37B0046D976 /* Zup_Movies.xcdatamodeld */,
 			);
 			path = "Zup Movies";
 			sourceTree = "<group>";
@@ -183,6 +187,7 @@
 				160AFE561E2A730800B49E9D /* MovieSearchViewController.swift */,
 				160AFE581E2A7FCF00B49E9D /* SearchResultTableViewController.swift */,
 				160AFE5D1E2AA72600B49E9D /* MovieDetailsTableViewController.swift */,
+				161025951E2C003E0046D976 /* MyMoviesTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				160AFE5B1E2A89EF00B49E9D /* ItemMovieTableViewCell.swift */,
+				161025981E2C00F50046D976 /* MyMovieItemTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -342,12 +348,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				160AFE201E2954EE00B49E9D /* Zup_Movies.xcdatamodeld in Sources */,
 				160AFE5C1E2A89EF00B49E9D /* ItemMovieTableViewCell.swift in Sources */,
+				161025941E2BE37B0046D976 /* Zup_Movies.xcdatamodeld in Sources */,
+				161025991E2C00F50046D976 /* MyMovieItemTableViewCell.swift in Sources */,
 				160AFE531E29713400B49E9D /* OMDBHelper.swift in Sources */,
 				160AFE511E29582200B49E9D /* DashboardViewController.swift in Sources */,
 				160AFE181E2954EE00B49E9D /* AppDelegate.swift in Sources */,
 				160AFE551E29743F00B49E9D /* Movie.swift in Sources */,
+				161025961E2C003E0046D976 /* MyMoviesTableViewController.swift in Sources */,
 				160AFE571E2A730800B49E9D /* MovieSearchViewController.swift in Sources */,
 				160AFE591E2A7FCF00B49E9D /* SearchResultTableViewController.swift in Sources */,
 				160AFE5E1E2AA72600B49E9D /* MovieDetailsTableViewController.swift in Sources */,
@@ -609,6 +617,7 @@
 				160AFE411E2954EE00B49E9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		160AFE421E2954EE00B49E9D /* Build configuration list for PBXNativeTarget "Zup MoviesTests" */ = {
 			isa = XCConfigurationList;
@@ -617,6 +626,7 @@
 				160AFE441E2954EE00B49E9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		160AFE451E2954EE00B49E9D /* Build configuration list for PBXNativeTarget "Zup MoviesUITests" */ = {
 			isa = XCConfigurationList;
@@ -625,16 +635,17 @@
 				160AFE471E2954EE00B49E9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		160AFE1E1E2954EE00B49E9D /* Zup_Movies.xcdatamodeld */ = {
+		161025921E2BE37B0046D976 /* Zup_Movies.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				160AFE1F1E2954EE00B49E9D /* Zup_Movies.xcdatamodel */,
+				161025931E2BE37B0046D976 /* Zup_Movies.xcdatamodel */,
 			);
-			currentVersion = 160AFE1F1E2954EE00B49E9D /* Zup_Movies.xcdatamodel */;
+			currentVersion = 161025931E2BE37B0046D976 /* Zup_Movies.xcdatamodel */;
 			path = Zup_Movies.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

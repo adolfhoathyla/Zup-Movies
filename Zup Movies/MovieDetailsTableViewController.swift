@@ -32,6 +32,9 @@ class MovieDetailsTableViewController: UITableViewController {
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = 300.0
         tableView.rowHeight = UITableViewAutomaticDimension
+        
+        let saveButton = UIBarButtonItem(title: "Save", style: UIBarButtonItemStyle.done, target: self, action: #selector(saveMovie))
+        navigationItem.rightBarButtonItem = saveButton
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -132,10 +135,25 @@ class MovieDetailsTableViewController: UITableViewController {
             if let year = movie.year { self.movieYear.text = String(describing: year) }
             self.moviePlot.text = movie.plot
         }
-        
 
+    }
+    
+    func saveMovie() {
         
-
+        var message = ""
+        var title = ""
+        
+        if movie.saveOnCoreData() {
+            message = "Movie saved successfully"
+            title = "Success"
+        } else {
+            message = "Movie can't be saved"
+            title = "Error"
+        }
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        alert.show(self, sender: nil)
     }
 
 }
