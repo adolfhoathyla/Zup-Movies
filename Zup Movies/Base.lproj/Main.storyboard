@@ -14,7 +14,8 @@
         <scene sceneID="3hc-vd-hZ2">
             <objects>
                 <navigationController id="WeI-O5-2LK" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="qDV-y2-KIK">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qDV-y2-KIK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.98431372549999996" green="0.97254901959999995" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
