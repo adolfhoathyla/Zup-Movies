@@ -23,8 +23,8 @@
 		160AFE5C1E2A89EF00B49E9D /* ItemMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160AFE5B1E2A89EF00B49E9D /* ItemMovieTableViewCell.swift */; };
 		160AFE5E1E2AA72600B49E9D /* MovieDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160AFE5D1E2AA72600B49E9D /* MovieDetailsTableViewController.swift */; };
 		161025941E2BE37B0046D976 /* Zup_Movies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 161025921E2BE37B0046D976 /* Zup_Movies.xcdatamodeld */; };
-		161025961E2C003E0046D976 /* MyMoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161025951E2C003E0046D976 /* MyMoviesTableViewController.swift */; };
-		161025991E2C00F50046D976 /* MyMovieItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161025981E2C00F50046D976 /* MyMovieItemTableViewCell.swift */; };
+		1610259B1E2C08420046D976 /* MyMoviesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1610259A1E2C08420046D976 /* MyMoviesCollectionViewController.swift */; };
+		1610259D1E2C09F90046D976 /* MyMovieItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1610259C1E2C09F90046D976 /* MyMovieItemCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,8 +79,8 @@
 		160AFE5B1E2A89EF00B49E9D /* ItemMovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemMovieTableViewCell.swift; sourceTree = "<group>"; };
 		160AFE5D1E2AA72600B49E9D /* MovieDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsTableViewController.swift; sourceTree = "<group>"; };
 		161025931E2BE37B0046D976 /* Zup_Movies.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Zup_Movies.xcdatamodel; sourceTree = "<group>"; };
-		161025951E2C003E0046D976 /* MyMoviesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMoviesTableViewController.swift; sourceTree = "<group>"; };
-		161025981E2C00F50046D976 /* MyMovieItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMovieItemTableViewCell.swift; sourceTree = "<group>"; };
+		1610259A1E2C08420046D976 /* MyMoviesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMoviesCollectionViewController.swift; sourceTree = "<group>"; };
+		1610259C1E2C09F90046D976 /* MyMovieItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMovieItemCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,7 +187,7 @@
 				160AFE561E2A730800B49E9D /* MovieSearchViewController.swift */,
 				160AFE581E2A7FCF00B49E9D /* SearchResultTableViewController.swift */,
 				160AFE5D1E2AA72600B49E9D /* MovieDetailsTableViewController.swift */,
-				161025951E2C003E0046D976 /* MyMoviesTableViewController.swift */,
+				1610259A1E2C08420046D976 /* MyMoviesCollectionViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -205,7 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				160AFE5B1E2A89EF00B49E9D /* ItemMovieTableViewCell.swift */,
-				161025981E2C00F50046D976 /* MyMovieItemTableViewCell.swift */,
+				1610259C1E2C09F90046D976 /* MyMovieItemCollectionViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -349,14 +349,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				160AFE5C1E2A89EF00B49E9D /* ItemMovieTableViewCell.swift in Sources */,
+				1610259B1E2C08420046D976 /* MyMoviesCollectionViewController.swift in Sources */,
 				161025941E2BE37B0046D976 /* Zup_Movies.xcdatamodeld in Sources */,
-				161025991E2C00F50046D976 /* MyMovieItemTableViewCell.swift in Sources */,
 				160AFE531E29713400B49E9D /* OMDBHelper.swift in Sources */,
 				160AFE511E29582200B49E9D /* DashboardViewController.swift in Sources */,
 				160AFE181E2954EE00B49E9D /* AppDelegate.swift in Sources */,
 				160AFE551E29743F00B49E9D /* Movie.swift in Sources */,
-				161025961E2C003E0046D976 /* MyMoviesTableViewController.swift in Sources */,
 				160AFE571E2A730800B49E9D /* MovieSearchViewController.swift in Sources */,
+				1610259D1E2C09F90046D976 /* MyMovieItemCollectionViewCell.swift in Sources */,
 				160AFE591E2A7FCF00B49E9D /* SearchResultTableViewController.swift in Sources */,
 				160AFE5E1E2AA72600B49E9D /* MovieDetailsTableViewController.swift in Sources */,
 			);
