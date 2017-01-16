@@ -126,21 +126,29 @@ class MovieDetailsTableViewController: UITableViewController {
         movieGenre.adjustsFontSizeToFitWidth = true
         movieCountry.adjustsFontSizeToFitWidth = true
         
-        OMDBHelper.getMovie(id: movie.id!) { (movie) in
-            self.movie = movie
-            
-            self.poster.image = movie.poster
-            self.movieTitle.text = movie.title
-            self.movieWriter.text = movie.writer
-            if let _ = movie.rating { self.movieRating.text = String(format: "IMDb rating: %.1f", movie.rating!) }
-            self.movieRuntime.text = movie.runtime
-            self.movieActors.text = movie.actors
-            self.movieGenre.text = movie.genre
-            self.movieCountry.text = movie.country
-            if let year = movie.year { self.movieYear.text = String(describing: year) }
-            self.moviePlot.text = movie.plot
+        if let _ = movie.managedObject {
+            loadInfos()
+        } else {
+            OMDBHelper.getMovie(id: movie.id!) { (movie) in
+                self.movie = movie
+                
+                self.loadInfos()
+            }
         }
-
+        
+    }
+    
+    private func loadInfos() {
+        self.poster.image = movie.poster
+        self.movieTitle.text = movie.title
+        self.movieWriter.text = movie.writer
+        if let _ = movie.rating { self.movieRating.text = String(format: "IMDb rating: %.1f", movie.rating!) }
+        self.movieRuntime.text = movie.runtime
+        self.movieActors.text = movie.actors
+        self.movieGenre.text = movie.genre
+        self.movieCountry.text = movie.country
+        if let year = movie.year { self.movieYear.text = String(describing: year) }
+        self.moviePlot.text = movie.plot
     }
     
     func saveMovie() {
