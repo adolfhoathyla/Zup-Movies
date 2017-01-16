@@ -32,7 +32,7 @@ class MovieDetailsTableViewController: UITableViewController {
         configureViewDetails()
         
         tableView.tableFooterView = UIView()
-        tableView.estimatedRowHeight = 300.0
+        tableView.estimatedRowHeight = 70.0
         tableView.rowHeight = UITableViewAutomaticDimension
         
         saveButton = UIBarButtonItem(title: "Save", style: UIBarButtonItemStyle.done, target: self, action: #selector(saveMovie))
@@ -62,7 +62,25 @@ class MovieDetailsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 6
     }
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 111.0
+        } else if indexPath.row == 5 {
+            return 300.0
+        }
+        return 44
+    }
 
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 111.0
+        } else if indexPath.row == 5 {
+            return UITableViewAutomaticDimension
+        }
+        return 44
+    }
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
@@ -178,3 +196,4 @@ class MovieDetailsTableViewController: UITableViewController {
     }
 
 }
+
