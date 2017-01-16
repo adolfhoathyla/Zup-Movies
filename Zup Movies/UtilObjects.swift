@@ -16,4 +16,12 @@ class UtilObjects: NSObject {
         return alert
     }
     
+    static func alertWithEvent(title: String, message: String, handler: @escaping (() -> ())) -> UIAlertController {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in
+            handler()
+        }))
+        return alert
+    }
+    
 }

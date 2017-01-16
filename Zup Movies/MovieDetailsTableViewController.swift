@@ -167,6 +167,8 @@ class MovieDetailsTableViewController: UITableViewController {
         self.movieCountry.text = movie.country
         if let year = movie.year { self.movieYear.text = String(describing: year) }
         self.moviePlot.text = movie.plot
+        
+        tableView.reloadData()
     }
     
     func saveMovie() {

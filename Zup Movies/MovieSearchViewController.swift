@@ -32,6 +32,7 @@ class MovieSearchViewController: UIViewController, UITextFieldDelegate {
     // MARK: - TextField Delegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         indicator.startAnimating()
+        textField.resignFirstResponder()
         
         OMDBHelper.searchMovie(text: textField.text!) { (movies) in
             if let _ = movies {
@@ -39,7 +40,9 @@ class MovieSearchViewController: UIViewController, UITextFieldDelegate {
                     self.performSegue(withIdentifier: "GO_TO_SEARCH_RESULT", sender: movies)
                 }
             } else {
-                self.present(UtilObjects.simpleAlert(title: "No results", message: "Your search returned no results"), animated: true, completion: nil)
+                self.present(UtilObjects.alertWithEvent(title: "No results", message: "Your search returned no results", handler: {
+                    self.movieTitle.becomeFirstResponder()
+                }), animated: true, completion: nil)
             }
             self.indicator.stopAnimating()
         }
