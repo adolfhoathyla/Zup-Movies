@@ -25,6 +25,7 @@
 		161025941E2BE37B0046D976 /* Zup_Movies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 161025921E2BE37B0046D976 /* Zup_Movies.xcdatamodeld */; };
 		1610259B1E2C08420046D976 /* MyMoviesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1610259A1E2C08420046D976 /* MyMoviesCollectionViewController.swift */; };
 		1610259D1E2C09F90046D976 /* MyMovieItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1610259C1E2C09F90046D976 /* MyMovieItemCollectionViewCell.swift */; };
+		1610259F1E2D19920046D976 /* UtilObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1610259E1E2D19920046D976 /* UtilObjects.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		161025931E2BE37B0046D976 /* Zup_Movies.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Zup_Movies.xcdatamodel; sourceTree = "<group>"; };
 		1610259A1E2C08420046D976 /* MyMoviesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMoviesCollectionViewController.swift; sourceTree = "<group>"; };
 		1610259C1E2C09F90046D976 /* MyMovieItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMovieItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		1610259E1E2D19920046D976 /* UtilObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilObjects.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 			children = (
 				160AFE521E29713400B49E9D /* OMDBHelper.swift */,
 				160AFE541E29743F00B49E9D /* Movie.swift */,
+				1610259E1E2D19920046D976 /* UtilObjects.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				160AFE181E2954EE00B49E9D /* AppDelegate.swift in Sources */,
 				160AFE551E29743F00B49E9D /* Movie.swift in Sources */,
 				160AFE571E2A730800B49E9D /* MovieSearchViewController.swift in Sources */,
+				1610259F1E2D19920046D976 /* UtilObjects.swift in Sources */,
 				1610259D1E2C09F90046D976 /* MyMovieItemCollectionViewCell.swift in Sources */,
 				160AFE591E2A7FCF00B49E9D /* SearchResultTableViewController.swift in Sources */,
 				160AFE5E1E2AA72600B49E9D /* MovieDetailsTableViewController.swift in Sources */,

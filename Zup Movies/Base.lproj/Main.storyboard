@@ -463,13 +463,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dn3-a1-HY7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2732" y="418.74062968515744"/>
+            <point key="canvasLocation" x="2823" y="-128"/>
         </scene>
         <!--My Movies Collection View Controller-->
         <scene sceneID="slg-hR-PBC">
             <objects>
                 <collectionViewController id="syK-c4-AKC" customClass="MyMoviesCollectionViewController" customModule="Zup_Movies" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Ylc-ix-MAA">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Ylc-ix-MAA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -531,6 +531,9 @@
                             <outlet property="delegate" destination="syK-c4-AKC" id="Usj-BU-ffv"/>
                         </connections>
                     </collectionView>
+                    <connections>
+                        <segue destination="yxa-jH-myT" kind="show" identifier="GO_TO_MY_MOVIE_DETAILS" id="3LO-9j-kFZ"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7yN-f2-F1b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -541,4 +544,7 @@
         <image name="movie_icon" width="128" height="128"/>
         <image name="search_icon" width="128" height="128"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="3LO-9j-kFZ"/>
+    </inferredMetricsTieBreakers>
 </document>

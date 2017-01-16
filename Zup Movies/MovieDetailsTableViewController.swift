@@ -22,6 +22,8 @@ class MovieDetailsTableViewController: UITableViewController {
     @IBOutlet var movieCountry: UILabel!
     @IBOutlet var movieYear: UILabel!
     @IBOutlet var moviePlot: UITextView!
+    
+    var saveButton = UIBarButtonItem()
 
     
     override func viewDidLoad() {
@@ -33,8 +35,11 @@ class MovieDetailsTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 300.0
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        let saveButton = UIBarButtonItem(title: "Save", style: UIBarButtonItemStyle.done, target: self, action: #selector(saveMovie))
+        saveButton = UIBarButtonItem(title: "Save", style: UIBarButtonItemStyle.done, target: self, action: #selector(saveMovie))
+        
         navigationItem.rightBarButtonItem = saveButton
+        
+        updateSaveButton()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -113,7 +118,7 @@ class MovieDetailsTableViewController: UITableViewController {
     }
     */
     
-    func configureViewDetails() {
+    private func configureViewDetails() {
         
         movieTitle.adjustsFontSizeToFitWidth = true
         movieWriter.adjustsFontSizeToFitWidth = true
@@ -151,9 +156,17 @@ class MovieDetailsTableViewController: UITableViewController {
             title = "Error"
         }
         
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        alert.show(self, sender: nil)
+        self.present(UtilObjects.simpleAlert(title: title, message: message), animated: true, completion: nil)
+        
+        updateSaveButton()
+    }
+    
+    private func updateSaveButton() {
+        if let _ = movie.managedObject {
+            saveButton.isEnabled = false
+        } else {
+            saveButton.isEnabled = true
+        }
     }
 
 }

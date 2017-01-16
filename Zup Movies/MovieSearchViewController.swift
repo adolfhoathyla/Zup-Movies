@@ -38,6 +38,8 @@ class MovieSearchViewController: UIViewController, UITextFieldDelegate {
                 if (movies?.count)! > 0 {
                     self.performSegue(withIdentifier: "GO_TO_SEARCH_RESULT", sender: movies)
                 }
+            } else {
+                self.present(UtilObjects.simpleAlert(title: "No results", message: "Your search returned no results"), animated: true, completion: nil)
             }
             self.indicator.stopAnimating()
         }
